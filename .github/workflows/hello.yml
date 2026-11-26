@@ -1,0 +1,10 @@
+# Workflow 
+name: Hello
+on: workflow_dispatch
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: hello all
+        run: echo "i love india"
+  
