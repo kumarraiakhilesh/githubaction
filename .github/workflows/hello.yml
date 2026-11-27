@@ -1,10 +1,28 @@
-# Workflow 
-name: Hello
+# Workflow
+name: CICD
 on: workflow_dispatch
+
 jobs:
-  say-hello:
-    runs-on: ubuntu-22.04
+  code:
+    runs-on: ubuntu-latest
     steps:
-      - name: hello all
-        run: echo "i love india"
-  
+      - name: clone the code
+        run: echo "cloning the code"
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: building using docker
+        run: echo "building using docker"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: running testcase
+        run: echo "testing the app"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploying on machine
+        run: echo "deploying the code"
